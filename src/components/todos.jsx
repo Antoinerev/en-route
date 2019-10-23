@@ -5,7 +5,7 @@ import Todo from './todo.jsx';
 const Todos = ({todos}) => {
   return(
       <div>
-        <ul>
+        <ul className="todos">
         {todos && todos.map(todo => (
           <Todo key={todo.id} todo={todo} />
         ))}
