@@ -6,9 +6,9 @@
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -26,4 +26,11 @@ ul {
   border: 2px solid black;
   margin: 0 2px 4px 2px;
   padding: 2px;
+}
+a:link {
+  color: #B3B3B2FF;
+  text-decoration: none;
+}
+a:visited {
+  color: #B3B3B2FF;
 }

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import Todos from './components/todos';
+import TodoDetails from './components/todoDetails.jsx';
 import About from './components/about.jsx';
 import Contact from './components/contact.jsx';
 
@@ -22,13 +23,17 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <header className='App-header'>
-          Routage todo list
-        </header>
         <Router>
-          <Route path="/todos" render={() => (
+          <header className='App-header'>
+            <strong><i>Routage todo list</i></strong>
+              <Link to={'/todos'}>todos</Link>
+              <Link to="/about" >About</Link>
+              <Link to="/contact" >Contacts</Link>
+          </header>
+          <Route exact path="/todos" render={() => (
             <Todos todos={this.state.todos}/>
           )} />
+          <Route path="/todos/:id" component={TodoDetails} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
         </Router>
