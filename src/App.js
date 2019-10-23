@@ -17,13 +17,12 @@ class App extends Component {
     return(fetch('https://jsonplaceholder.typicode.com/todos'));
   }
   render() {
-    console.log(this.state.todos);
     return (
       <div className='App'>
         <header className='App-header'>
           Routage todo list
         </header>
-        <Todos />
+        <Todos todos={this.state.todos}/>
       </div>
     );
   }

@@ -1,15 +1,16 @@
 import React from 'react';
+import Todo from './todo.jsx';
 
 
-const Todos = () => {
+const Todos = ({todos}) => {
   return(
-    <div>
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-    </div>
+      <div>
+        <ul>
+        {todos && todos.map(todo => (
+          <Todo key={todo.id} todo={todo} />
+        ))}
+        </ul>
+      </div>
   )
 }
 export default Todos;
