@@ -26,7 +26,9 @@ class App extends Component {
           Routage todo list
         </header>
         <Router>
-          {/*<Todos todos={this.state.todos}/>*/}
+          <Route path="/todos" render={() => (
+            <Todos todos={this.state.todos}/>
+          )} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
         </Router>
