@@ -25,16 +25,27 @@ ul {
   min-height: 120px;
   border: 2px solid black;
   margin: 0 2px 4px 2px;
-  padding: 2px;
+  /*padding: 2px;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+.todo span {
+  padding: 3px;
+}
+.todo-link {
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
 a:link {
-  color: #B3B3B2FF;
+  color: white;
   text-decoration: none;
 }
 a:visited {
-  color: #B3B3B2FF;
+  color: white;
+}
+a:hover {
+  color: #CCCCCBFF;
 }
